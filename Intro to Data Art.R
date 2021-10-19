@@ -83,7 +83,7 @@ Example6 <- square_color_points %>%
   geom_point(color = square_color_points$colors)+
   coord_equal()
 
-# Example 7: Geom_Polygon ggplot with colored points====
+# Example 7: Geom_Polygon ggplot with colored points and Random Sizes====
 Example7 <- square_color_points %>%
   ggplot(aes(x = x,
              y = y))+
@@ -127,6 +127,10 @@ Lines_data <-  tibble(x = rep(1, 4),
 Circles_data <- tibble(x = 3,
                        y = unique(abs(seq(0,6, by = 2) - 1)),
                        size = 1:3)
+
+##Logic Check: Do these dataframes have the same number of row?##
+
+nrow(Lines_data) == nrow(Circles_data)
 
 ## Example 10: Attempting to add Lines_data and Circles_data together in geom WITHOUT inherit.aes====
 Lines_data %>%
