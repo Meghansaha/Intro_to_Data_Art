@@ -129,7 +129,6 @@ Circles_data <- tibble(x = 3,
                        size = 1:3)
 
 ##Logic Check: Do these dataframes have the same number of row?##
-
 nrow(Lines_data) == nrow(Circles_data)
 
 ## Example 10: Attempting to add Lines_data and Circles_data together in geom WITHOUT inherit.aes====
